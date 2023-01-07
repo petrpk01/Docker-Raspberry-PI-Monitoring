@@ -76,6 +76,6 @@ services:
       - node-exporter:node-exporter
 
 networks:
-  rpimonitor_default:
-    external:
-      name: rpimonitor_default
+  default:
+    external: true
+    name: rpimonitor_default
