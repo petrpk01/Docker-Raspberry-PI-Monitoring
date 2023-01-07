@@ -42,18 +42,18 @@ services:
     volumes:
       # to be modified depending on your needs
       - /path/to/your/grafana/data:/var/lib/grafana
-      - /path/to/your/grafana/grafana.ini:/etc/grafana/grafana.ini
+    #  - /path/to/your/grafana/grafana.ini:/etc/grafana/grafana.ini
       - /path/to/your/grafana/provisioning:/etc/grafana/provisioning
 
-  node-exporter:
-    container_name: monitoring-node-exporter
-    expose:
-      - 9100
-    hostname: rpi-exporter
-    image: prom/node-exporter:latest
+#  node-exporter:
+#    container_name: monitoring-node-exporter
+#    expose:
+#      - 9100
+#    hostname: rpi-exporter
+#    image: prom/node-exporter:latest
     #networks:
     #  - rpimonitor_default
-    restart: unless-stopped
+#    restart: unless-stopped
 
   prometheus:
     command:
