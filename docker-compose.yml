@@ -73,7 +73,7 @@ services:
       - /path/to/your/prometheus/config:/etc/prometheus/
     links:
       - cadvisor:cadvisor
-      - node-exporter:node-exporter
+    #  - node-exporter:node-exporter
 
 #networks:
 #  default:
